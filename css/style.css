@@ -20,6 +20,44 @@ header{
   padding: 50px 10% 50px;
 }
 
+header .menu{
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+header .menu span{
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  border-radius: 10px;
+  background: #fff;
+  transition: .40s all ease;
+}
+
+header .menu span:nth-child(2){
+  transform: translateY(10px);
+}
+
+header .menu span:nth-child(3){
+  transform: translateY(20px);
+}
+
+header .menu:hover span:nth-child(1){
+  transform: rotate(45deg);
+}
+
+header .menu:hover span:nth-child(2){
+  transform: rotate(-45deg);
+}
+
+header .menu:hover span:nth-child(3){
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
 header{
   display: flex;
   justify-content: space-between;
@@ -225,4 +263,141 @@ footer p{
 
 footer p span{
   color: #BDBDBD;
+}
+
+
+@media (max-width: 1500px){
+
+  section .gridConsultant .contentOne .boxContent h1 {
+    color: rgb(255, 255, 255);
+    font-family: Lora, serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+  }
+
+  section .gridConsultant .contentOne .boxContent p {
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+
+  section .gridConsultant .contentTwo .boxDesignPerson {
+    position: absolute;
+    bottom: -70px;
+    right: 30px;
+    width: 350px;
+    height: 150px;
+  }
+
+  section .gridConsultant .contentTwo .boxDesignPerson .profile img {
+    width: 40px;
+  }
+
+  section .gridConsultant .contentTwo .boxDesignPerson .profile .profileData span:nth-child(1) {
+    font-size: .8rem;
+  }
+
+  section .gridConsultant .contentTwo .boxDesignPerson .profile .profileData span:nth-child(2) {
+    font-size: .8rem;
+  }
+
+  section .gridConsultant .contentTwo .boxDesignPerson p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1200px){
+
+  section .gridConsultant .contentOne .boxContent h1 {
+    color: rgb(255, 255, 255);
+    font-family: Lora, serif;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  section .gridConsultant .contentOne .boxContent p {
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+
+  section .gridConsultant .contentTwo .boxDesignPerson {
+    position: absolute;
+    bottom: -50px;
+    right: 30px;
+    width: 300px;
+    height: 100px;
+  }
+
+  section .gridConsultant .contentTwo .boxDesignPerson .profile img {
+    width: 35px;
+    border-radius: 50%;
+  }
+
+
+  section .gridConsultant .contentTwo .boxDesignPerson .profile .profileData span:nth-child(1) {
+    font-size: .6rem;
+  }
+
+  section .gridConsultant .contentTwo .boxDesignPerson .profile .profileData span:nth-child(2) {
+    font-size: .6rem;
+  }
+
+  section .gridConsultant .contentTwo .boxDesignPerson .profile {
+    margin-bottom: .2rem;
+  }
+
+  section .gridConsultant .contentTwo .boxDesignPerson p {
+    font-size: .9rem;
+  }
+}
+
+
+@media (max-width: 960px){
+  section .gridConsultant {
+    grid-template-columns: 1fr;
+  }
+
+  section .gridConsultant .contentOne .boxContent {
+    gap: 20px;
+  }
+}
+
+
+@media (max-width: 500px){
+
+  section .gridConsultant .contentOne .boxContent h1 {
+    font-size: 1.9rem;
+  }
+
+  section .gridConsultant .contentOne .boxContent p {
+    font-size: .8rem;
+  }
+
+  section .gridConsultant .contentOne .boxContent a {
+    font-size: .8rem;
+  }
+
+  section .gridConsultant {
+    grid-template-columns: 1fr;
+  }
+
+  section .gridConsultant .contentOne .boxContent {
+    gap: 20px;
+  }
+  
+
+  section .gridConsultant .contentTwo .boxDesignPerson {
+    position: absolute;
+    bottom: -50px;
+    right: 15px;
+    width: 200px;
+    height: 100px;
+  }
+
+  section .gridConsultant .contentTwo .boxDesignPerson p {
+    font-size: .6rem;
+  }
 }
